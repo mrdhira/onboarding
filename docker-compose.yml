@@ -8,9 +8,9 @@ services:
       - "/var/lib/postgresql:/var/lib/postgresql"
     restart: always
     environment:
-      - POSTGRES_USER: "postgres"
-      - POSTGRES_PASSWORD: "secret"
-      - POSTGRES_DB: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "secret"
+      POSTGRES_DB: "postgres"
     ports:
       - "5432:5432"
 
@@ -22,10 +22,10 @@ services:
       - "/var/lib/mysql:/var/lib/mysql"
     restart: always
     environment: 
-      - MYSQL_ROOT_PASSWORD: "root" # root superuser password
-      - MYSQL_USER: "mysql"
-      - MYSQL_PASSWORD: "secret"
-      - MYSQL_DATABASE: "mysql"
+      MYSQL_ROOT_PASSWORD: "root" # root superuser password
+      MYSQL_USER: "mysql"
+      MYSQL_PASSWORD: "secret"
+      MYSQL_DATABASE: "mysql"
     ports:
       - "3306:3306"
 
@@ -36,9 +36,9 @@ services:
       - "/var/lib/mongo:/data"
     restart: always
     environment:
-      - MONGO_INITDB_ROOT_USERNAME: "mongo"
-      - MONGO_INITDB_ROOT_PASSWORD: "secret"
-      - MONGO_INITDB_DATABASE: "mongo"
+      MONGO_INITDB_ROOT_USERNAME: "mongo"
+      MONGO_INITDB_ROOT_PASSWORD: "secret"
+      MONGO_INITDB_DATABASE: "mongo"
     ports:
       - "27017:27017"
 
